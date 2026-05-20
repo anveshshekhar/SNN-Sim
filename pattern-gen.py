@@ -24,15 +24,15 @@ t_eval = np.arange(0, t_sim, DT_F)
 N = len(t_eval)
 
 N_R = 4
-tau_v, tau_u = 1.0, 5.0
-beta, gamma = 2.5, 2.5
+tau_v, tau_u = 0.15,0.60 
+beta, gamma = 2.5, 2.0   
 
-w = np.array([[ 0.0, -1.5,  0.0,  0.0],
-              [-1.5,  0.0,  0.0,  0.0],
-              [ 0.3,  0.0,  0.0, -1.5],
-              [ 0.0,  0.3, -1.5,  0.0]])
-
+w = np.array([[ 0.0, -2.0,  0.0,  0.0],
+              [-2.0,  0.0,  0.0,  0.0],
+              [ 0.3,  0.0,  0.0, -2.0],
+              [ 0.0,  0.3, -2.0,  0.0]])
 v_res = np.zeros((N, N_R))
+v_res[0, 0] = 0.5  
 u_res = np.zeros((N, N_R))
 
 for t in range(1, N):
