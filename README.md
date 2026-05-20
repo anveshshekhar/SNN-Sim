@@ -49,6 +49,3 @@ python twin-rotor.py
 
 ```
 
-```
-
-```
